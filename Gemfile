@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bulma-rails', '~> 0.9.1'
+gem 'carrierwave'
+gem 'cloudinary'
 gem 'pg'
 gem 'simple_form', '~> 5.1'
 
