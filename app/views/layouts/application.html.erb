@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>RailsCapstone</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="https://kit.fontawesome.com/01284b6a14.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--Navigation Bar-->
+  <div class="container mt-3 mb-6">
+    <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <img src="assets/images/logo.png" width="112" height="28">
+          </a>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              Home
+            </a>
+
+            <a class="navbar-item">
+              Documentation
+            </a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <%= session_button %>
+            </div>
+            <div class="navbar-item">
+              <%= sign_up_link %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--Flash-->
+  <% flash.each do |message_type, message| %>
+    <div class="notification is-<%= message_type %>"><%= message %></div>
+  <% end %>
+  <!--Home Page-->
+  <%= yield %>
+  <!--Footer-->
+</body>
+
+</html>

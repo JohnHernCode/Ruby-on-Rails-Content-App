@@ -1,0 +1,20 @@
+<h1 class="mt-6 ml-6 mb-6">Sign up</h1>
+
+<div class="ml-6 is-flex-direction-row">
+  <div class="columns">
+    <%= form_with(model: @user, local: true) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'column input' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'column input' %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'column input' %>
+
+      <%= f.submit "Create my account", class: "button is-text" %>
+    <% end %>
+  </div>
+</div>

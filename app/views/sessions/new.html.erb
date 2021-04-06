@@ -1,0 +1,17 @@
+<h1 class='is-align-content-center'>Log in</h1>
+
+<div class="is-flex-direction-row">
+  <div class="column">
+    <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'column input' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'column input' %>
+
+      <%= f.submit "Log in", class: "button is-text" %>
+    <% end %>
+
+  </div>
+</div>
