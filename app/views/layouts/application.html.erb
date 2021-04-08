@@ -17,7 +17,9 @@
 <body>
   <%= render 'shared/nav' %>
   <!--Flash-->
-  <%= flash_messages(flash) %>
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
   <!--Home Page-->
   <%= yield %>
   <!--Footer-->

@@ -1,5 +1,3 @@
-
-
 module ApplicationHelper
   def session_button
     if logged_in?
@@ -12,17 +10,10 @@ module ApplicationHelper
 
   def sign_up_link
     if logged_in?
+      link_to 'Create a Category', new_category_path, class: 'nav-item nav-link text-white'
     else
       link_to 'Sign up', signup_path, class: 'mx-2'
     end
-  end
-
-  def flash_messages(flash)
-    message = ''
-    flash.each do |message_type, value|
-      message << content_tag(:div, value, class: "alert alert-#{message_type}")
-    end
-    message.html_safe
   end
 
   def nav_menu(categories)
