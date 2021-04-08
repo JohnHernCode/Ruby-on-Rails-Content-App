@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class Article < ApplicationRecord
   attr_accessor :category_id
+
   mount_uploader :image, ImageUploader
   before_save :capitalize_title
 
@@ -14,7 +17,7 @@ class Article < ApplicationRecord
   def capitalize_title
     self.title = title.capitalize
   end
-  
+
   def self.featured_article
     return unless Vote.any?
 

@@ -1,2 +1,39 @@
+<div class="container">
+  <h1 class="theme-color text-center"><%= @article.title %></h1>
+  <div class="col-md-12">
+    <div class="col-md-6 mb-100">
+      <p>Category: <%= @article.categories[0].name %></p>
+      <p>
+        Tags:
+        <% @article.tags.each do |tag| %>
 
-<img src="<%= @post.image %>"/>
+          <span class="tag">
+            <%= link_to tag.name, tag_path(tag) %>
+          </span>
+        <% end %>
+      </p>
+      <p>
+        <h6 class="theme-color">
+          <%= number_of_comments(@article) %> posted for this article
+        </h6>
+          <h6 class="theme-color">
+            <%= number_of_votes(@article) %>
+            <span> for this article</span>
+          </h6>
+      </p>
+
+      <p class="text-center">
+        <%= image_tag(@article.image.article_show.url) %>
+      </p>
+
+      <p><%= @article.text %></p>
+
+      <div>
+        <%= vote_button(@article) if @current_user %><br />
+        <%= link_to 'Edit | ', edit_article_path(@article) if @current_user %>
+        <%= link_to 'Back', articles_path %>
+      </div>
+    </div>
+  </div>
+
+</div>

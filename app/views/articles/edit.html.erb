@@ -1,11 +1,9 @@
 <div class="container">
-  <div class="col-md-12 m-5 text-center">
-    <h1 class="theme-color">Write an Article</h1>
-  </div>
-
+  <h1 class="theme-color">Editing Article</h1>
 
   <%= render 'form', article: @article %>
 
+  <%= link_to 'Show', @article %> |
   <%= link_to 'Back', root_path %>
 
 </div>
