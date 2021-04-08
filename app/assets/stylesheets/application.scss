@@ -14,3 +14,22 @@
  *= require_self
  */
  @import "bulma";
+ 
+ body {
+  .theme-color {
+    font-weight: 400;
+    color: #fe6001;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  .theme-btn {
+    background-color: #4e453f;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+ }

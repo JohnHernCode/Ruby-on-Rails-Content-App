@@ -1,6 +1,8 @@
+
+
 FactoryBot.define do
   factory :category do
-    name { "MyString" }
+    name { 'MyString' }
     priority { 1 }
   end
 end
