@@ -32,4 +32,26 @@
     border-radius: 5px;
     margin-top: 20px;
   }
+
+  .feature {
+    height: 100vh;
+  }
+
+  .featured {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+  }
+
+  .feature-title {
+    padding-top: 200px;
+    padding-left: 30px;
+    font-size: 2rem;
+  }
+  
+  .feature-text {
+    padding-left: 30px;
+    color: #fff;
+    font-size: 2rem;
+  }
  }

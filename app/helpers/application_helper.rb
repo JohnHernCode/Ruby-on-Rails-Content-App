@@ -10,7 +10,7 @@ module ApplicationHelper
 
   def sign_up_link
     if logged_in?
-      link_to 'Create a Category', new_category_path, class: 'nav-item nav-link text-white'
+      link_to 'Create a Category', new_category_path, class: 'nav-item nav-link btn'
     else
       link_to 'Sign up', signup_path, class: 'mx-2'
     end
