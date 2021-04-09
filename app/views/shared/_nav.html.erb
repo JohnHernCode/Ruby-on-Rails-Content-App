@@ -1,24 +1,27 @@
-<nav class="navbar navbar-default">
-  <div class="container header">
-    <div class="navbar-header">
+<nav class="navbar navbar-expand-lg">
+  <div class="d-flex flex-row bd-highlight">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="navbar-brand">
       <%= link_to image_tag("logos/logo.png", alt: "logo", :size => "112x28"), '/', class: 'navbar-brand' %>
     </div>
-    <div id="navbar">
-      <ul class="nav navbar-nav">
-        <li><%= link_to 'HOME', root_path, class: 'theme-color' %></li>
-      </ul>
-
-      <ul class="nav navbar-nav">
-         nav_menu(@nav_categories)
-      </ul>
-
-        <ul class="nav navbar-nav pull-right d-flex">
-          <div class="navbar-nav">
-            <%= session_button %>
-          </div>
-          <div class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row ">
+        <li class="p-2 bd-highlight"><%= link_to 'HOME', root_path, class: 'theme-color' %></li>
+        <li class="p-2 bd-highlight"><%= nav_menu(@nav_categories) %></li>
+        <li class="p-2 bd-highlight theme-color is-align-content-end">
+          <div>
             <%= sign_up_link %>
           </div>
+        </li>
+        <li class="p-2 bd-highlight theme-color">
+          <div>
+            <%= session_button %>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

@@ -1,8 +1,6 @@
-<div class="row">
+<div class="row pb-6">
   <div class="col-md-4 offset-4">
     <%= form_with(model: article, local: true) do |form| %>
-
-    <%= render 'shared/error_messages' %>
 
     <div class="field">
       <%= form.label :title %>
@@ -28,7 +26,7 @@
       <%= form.collection_select :category_id, Category.order(:name), :id, :name %>
     </div>
 
-    <div class="actions">
+    <div class="field actions">
       <%= form.submit class: "mt-2 btn theme-btn" %>
     </div>
     <% end %>

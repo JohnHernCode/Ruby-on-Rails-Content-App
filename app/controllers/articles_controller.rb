@@ -1,17 +1,11 @@
-# frozen_string_literal: true
-
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
+  before_action :set_current_user
 
   def index
     @articles = Article.all
     @featured = Article.featured_article
     @categories = Category.order(:priority).limit(4).includes(:articles)
-  end
-
-  def show
-    @comment = Comment.new
-    @comment.article_id = @article.id
   end
 
   def new
@@ -21,7 +15,7 @@ class ArticlesController < ApplicationController
   def edit; end
 
   def create
-    @article = @current_user.articles.build(article_params)
+    @article = current_user.articles.build(article_params)
 
     respond_to do |format|
       if @article.save

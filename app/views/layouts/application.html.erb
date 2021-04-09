@@ -21,8 +21,29 @@
     <div class="alert alert-<%= message_type %>"><%= message %></div>
   <% end %>
   <!--Home Page-->
+  <div class="mb-6 pb-6">
   <%= yield %>
+</div>
   <!--Footer-->
+  <footer class='flex-h space-between'>
+    <div>
+      <%= link_to image_tag("logos/logo.png", alt: "logo", :size => "112x28"), '/', class: 'navbar-brand' %>
+    </div>
+
+    <ul class='footer-info flex-h'>
+      <li class="rules">Privacy Policy</li>
+      <li class='rules'>Terms & Conditions</li>
+      <li class='text-white'>Copyright 2021. All rights reserved</li>
+    </ul>
+
+    <ul class='footer-info flex-h space-between'>
+      <li><span class='text-white'>Connect with us</span></li>
+      <li><%= link_to "<i class='fa fa-twitter social-icons'></i>".html_safe, '#' %></li>
+      <li><%= link_to "<i class='fa fa-instagram social-icons'></i>".html_safe, '#' %></li>
+      <li><%= link_to "<i class='fa fa-facebook social-icons'></i>".html_safe, '#' %></li>
+    </ul>
+  </footer>
+</div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
   </script>

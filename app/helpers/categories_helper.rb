@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module CategoriesHelper
   def vote_button(article)
     vote = Vote.find_by(user: @current_user, article: article)
@@ -31,8 +29,7 @@ module CategoriesHelper
   def odd_article_image(index, article)
     article_image = ''
 
-    article_image << content_tag(:div, '', class: 'article-img',
-                                           style: "background-image: url(#{article.image.category_show.url}")
+    article_image << content_tag(:div, '', style: "background-image: url(#{article.image.category_show.url}")
 
     article_image.html_safe if index.odd?
   end
@@ -40,8 +37,7 @@ module CategoriesHelper
   def even_article_image(index, article)
     article_image = ''
 
-    article_image << content_tag(:div, '', class: 'article-img',
-                                           style: "background-image: url(#{article.image.category_show.url}")
+    article_image << content_tag(:div, '', style: "background-image: url(#{article.image.category_show.url}")
 
     article_image.html_safe if index.even?
   end
