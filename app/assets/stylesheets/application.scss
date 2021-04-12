@@ -24,15 +24,15 @@ body {
     color: #000;
     font-weight: 600;
   }
-  
+
   .nav-margin {
     margin-left: -10px;
     margin-right: -10px;
   }
-  
+
   nav.navbar.navbar-default {
     margin-bottom: 0;
-  }  
+  }
 
   .theme-color {
     font-weight: 400;
@@ -105,18 +105,18 @@ body {
     color: #000;
     font-weight: 600;
   }
-  
+
   .nav-margin {
     margin-left: 10px;
     margin-right: 10px;
   }
-  
+
   .article-img {
     height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
+
   .content {
     margin: 0 20px;
     height: 50vh;
@@ -125,26 +125,26 @@ body {
   .footer-info {
     padding: 0;
     margin-left: 20px;
-  
+
     li {
       margin: 10px;
-  
+
       a {
         color: #000;
       }
     }
   }
-  
+
   .category {
     background-repeat: no-repeat;
     background-size: cover;
-  
+
     p {
       color: #fff;
       font-weight: 600;
       font-size: 2rem;
       margin-top: 40px;
-  
+
       a {
         color: #fff;
         margin-left: 30px;
@@ -153,13 +153,13 @@ body {
         font-weight: 600;
         border-bottom: 2px solid #cff32d;
       }
-  
+
       a:hover {
         text-decoration: none;
         cursor: pointer;
       }
     }
-  
+
     span {
       color: #fff;
       margin-left: 30px;
@@ -169,11 +169,11 @@ body {
       bottom: 100px;
     }
   }
-  
+
   .underline {
     border-bottom: 2px solid #cff32d;
   }
-  
+
   .field {
     margin: 20px auto;
   }
@@ -185,7 +185,7 @@ body {
     background-color: #fe6001;
     padding: 3px;
   }
-  
+
   .rules {
     color: #fe6001;
   }

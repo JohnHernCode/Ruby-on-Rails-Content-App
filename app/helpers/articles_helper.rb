@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module ArticlesHelper
   def featured_title(article)
     article.try(:title)

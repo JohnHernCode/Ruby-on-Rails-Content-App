@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Article < ApplicationRecord
   attr_accessor :category_id
 
