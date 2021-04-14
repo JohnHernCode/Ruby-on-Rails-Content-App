@@ -6,7 +6,6 @@ class ArticlesController < ApplicationController
     @articles = Article.all
     @featured = Article.featured_article
     @categories = Category.order(:priority).limit(4).includes(:articles)
-    render json: articles, include: [:image]
   end
 
   def new
@@ -55,6 +54,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :text, :image, :category_id, :image_cache, :tag_list)
+    params.require(:article).permit(:title, :text, :image, :category_id, :image_cache)
   end
 end

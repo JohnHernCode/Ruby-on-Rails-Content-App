@@ -65,8 +65,9 @@ $ bundler install --without production
 Setup database with:
 
 ```
-$ rails db:migrate
-$ rails db:seed
+$ rails db:migrate (creates and migrates the database)
+$ rails db:seed    (seeds the database with default values)
+$ rake database:correction_seq_id  (corrects the postgreSQL sequence after seed)
 ```
 
 ### Usage
@@ -78,7 +79,7 @@ $ rails server
 ```
 
 Open `http://localhost:3000/` in your browser and click sign up to create a new user.
-- for any technical problems running ```rails db:migrate:reset && rails db:seed``` should solve it
+- for any technical problems running ```rails db:migrate:reset && rails db:seed && rake database:correction_seq_id ``` should solve it
 
 #### Create User
 

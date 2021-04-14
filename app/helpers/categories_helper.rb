@@ -27,18 +27,14 @@ module CategoriesHelper
   end
 
   def odd_article_image(index, article)
-    article_image = ''
-
-    article_image << content_tag(:div, '', style: "background-image: url(#{article.image.category_show.url}")
-
-    article_image.html_safe if index.odd?
+    return unless index.odd?
+    img = Cloudinary::Utils.cloudinary_url(article.image.category_show.filename, fetch_format: 'auto', quality: 'auto')
+    "<img src='#{img}' alt='' class=''>".html_safe
   end
 
   def even_article_image(index, article)
-    article_image = ''
-
-    article_image << content_tag(:div, '', style: "background-image: url(#{article.image.category_show.url}")
-
-    article_image.html_safe if index.even?
+    return unless index.even?
+    img = Cloudinary::Utils.cloudinary_url(article.image.category_show.filename, fetch_format: 'auto', quality: 'auto')
+    "<img src='#{img}' alt='' class=''>".html_safe
   end
 end
