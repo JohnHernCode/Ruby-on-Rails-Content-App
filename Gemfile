@@ -33,6 +33,7 @@ gem 'bulma-rails', '~> 0.9.1'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'faker', '~> 2.17'
+gem 'launchy', '~> 2.4', '>= 2.4.3'
 gem 'pg'
 gem 'simple_form', '~> 5.1'
 

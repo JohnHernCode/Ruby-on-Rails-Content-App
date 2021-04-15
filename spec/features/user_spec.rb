@@ -2,12 +2,13 @@
 require 'rails_helper'
 
 RSpec.feature 'Users', type: :feature do
+  before(:all) do
+    @user = User.new(name: 'TestGuy', password: 'password',
+                    password_confirmation: 'password')
+    @user.save
+  end
   context 'Validate User Create Account' do
     before(:each) do
-      user = User.new(name: 'TestGuy', password: 'password',
-                      password_confirmation: 'password')
-      user.save
-
       visit '/signup'
       within 'form' do
         fill_in 'user_name', with: 'clowny'
@@ -31,7 +32,7 @@ RSpec.feature 'Users', type: :feature do
 
     scenario 'should fail with already existing name' do
       within 'form' do
-        fill_in 'user_name', with: User.last.name
+        fill_in 'user_name', with: @user.name
       end
       click_button 'Create Account'
       expect(page).to have_content('Name has already been taken')
@@ -62,28 +63,26 @@ RSpec.feature 'Users', type: :feature do
       expect(page).to have_content("Password confirmation doesn't match Password")
     end
   end
+end
 
+RSpec.feature 'Users', type: :feature do
+  before(:all) do
+    @user = User.new(name: 'TestGuy', password: 'password',
+                    password_confirmation: 'password')
+    @user.save
+  end
   context 'Validate User Log In' do
     before(:each) do
-
-      visit '/signup'
-      within 'form' do
-        fill_in 'user_name', with: 'clowny'
-        fill_in 'user_password', with: 'clownpass'
-        fill_in 'user_password_confirmation', with: 'clownpass'
-        click_button 'Create Account'
-      end
-
       visit '/login'
     end
 
     scenario 'should succeed' do
       within 'form' do
-        fill_in 'Name', with: User.last.name
-        fill_in 'Password', with: 'clownpass'
+        fill_in id: 'session_name', with: @user.name
+        fill_in id: 'session_password', with: 'password'
       end
       click_on(id: 'log_in')
-      expect(page).to have_content('CREATE A CATEGORY')
+      expect(page).to have_content('You signed in successfully!')
     end
 
     scenario 'should fail with non-existing password' do
@@ -98,7 +97,7 @@ RSpec.feature 'Users', type: :feature do
     scenario 'should fail with wrong username' do
       within 'form' do
         fill_in 'session_name', with: 'brown'
-        fill_in 'session_password', with: 'clownpass'
+        fill_in 'session_password', with: 'password'
       end
       click_button 'Log in'
       expect(page).to have_content('Invalid name/password combination')
@@ -114,4 +113,5 @@ RSpec.feature 'Users', type: :feature do
     end
   end
 end
+
 # rubocop:enable Metrics/BlockLength
