@@ -20,9 +20,22 @@ body {
   min-width: 1024px;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 
+  a:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .li-flex {
+    align-items: center;
+  }
+
   .nav-theme {
-    color: #000;
+    color: #837f7c;
     font-weight: 600;
+  }
+
+  .move-right {
+    padding-left: 80px;
   }
 
   .nav-margin {
@@ -33,7 +46,6 @@ body {
   .cat-margin {
     margin-left: 10px;
     margin-right: 10px;
-    align-content: center;
   }
 
   nav.navbar.navbar-default {
@@ -43,10 +55,6 @@ body {
   .theme-color {
     font-weight: 400;
     color: #fe6001;
-  }
-
-  a {
-    text-decoration: none;
   }
 
   .theme-btn {

@@ -2,7 +2,8 @@
   <% @category_articles.each_with_index do |article, index| %>
   <div>
 
-    <%= odd_article_image(index, article) %>
+    
+    <%= even_article_image(index, article) %>
 
     <div class="content">
       <p class="theme-color"><%= @category.name %></p>
@@ -14,7 +15,7 @@
       &nbsp; <%= vote_button(article) if @current_user %><br />
     </div>
 
-    <%= even_article_image(index, article) %>
+    <%= odd_article_image(index, article) %>
   </div>
 
   <% end %>

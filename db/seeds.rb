@@ -24,7 +24,7 @@ if Article.count.zero?
     b.title = Faker::Coffee.blend_name
     b.text = Faker::Coffee.notes
     b.author_id = User.first.id
-    File.open('./app/assets/images/deadpooldif.jpg') { |f| b.image = f }
+    File.open('./app/assets/images/stock.jpg') { |f| b.image = f }
     b.save
   end
 end
