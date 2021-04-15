@@ -66,11 +66,6 @@ RSpec.feature 'Users', type: :feature do
 end
 
 RSpec.feature 'Users', type: :feature do
-  before(:all) do
-    @user = User.new(name: 'TestGuy', password: 'password',
-                    password_confirmation: 'password')
-    @user.save
-  end
   context 'Validate User Log In' do
     before(:each) do
       visit '/login'
@@ -79,7 +74,7 @@ RSpec.feature 'Users', type: :feature do
     scenario 'should succeed' do
       visit '/signup'
       within 'form' do
-        fill_in 'user_name', with: 'clowny'
+        fill_in 'user_name', with: 'clownp'
         fill_in 'user_password', with: 'clownpass'
         fill_in 'user_password_confirmation', with: 'clownpass'
       end
@@ -87,7 +82,7 @@ RSpec.feature 'Users', type: :feature do
       click_on('LOG OUT')
       visit '/login'
       within 'form' do
-        fill_in id: 'session_name', with: 'clowny'
+        fill_in id: 'session_name', with: 'clownp'
         fill_in id: 'session_password', with: 'clownpass'
       end
       click_on(id: 'log_in')
@@ -96,7 +91,7 @@ RSpec.feature 'Users', type: :feature do
 
     scenario 'should fail with non-existing password' do
       within 'form' do
-        fill_in 'session_name', with: User.last.name
+        fill_in 'session_name', with: 'clownp'
         fill_in 'session_password', with: ''
       end
       click_button 'Log in'
@@ -114,7 +109,7 @@ RSpec.feature 'Users', type: :feature do
 
     scenario 'should fail with wrong password' do
       within 'form' do
-        fill_in 'session_name', with: User.last.name
+        fill_in 'session_name', with: 'clownp'
         fill_in 'session_password', with: 'wrong'
       end
       click_button 'Log in'
