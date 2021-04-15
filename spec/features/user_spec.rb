@@ -77,9 +77,18 @@ RSpec.feature 'Users', type: :feature do
     end
 
     scenario 'should succeed' do
+      visit '/signup'
       within 'form' do
-        fill_in id: 'session_name', with: @user.name
-        fill_in id: 'session_password', with: 'password'
+        fill_in 'user_name', with: 'clowny'
+        fill_in 'user_password', with: 'clownpass'
+        fill_in 'user_password_confirmation', with: 'clownpass'
+      end
+      click_button 'Create Account'
+      click_on('LOG OUT')
+      visit '/login'
+      within 'form' do
+        fill_in id: 'session_name', with: 'clowny'
+        fill_in id: 'session_password', with: 'clownpass'
       end
       click_on(id: 'log_in')
       expect(page).to have_content('You signed in successfully!')
