@@ -24,8 +24,7 @@ module ApplicationHelper
     end
 
     categories.each do |category|
-      category_links << content_tag(:li,
-                                    link_to(category.name.upcase, category_path(category), html_options = { class: 'nav-theme cat-margin' }), option)
+      category_links << content_tag(:li, link_to(category.name.upcase, category_path(category), html_options = { class: 'nav-theme cat-margin' }), option)
     end
 
     category_links.html_safe

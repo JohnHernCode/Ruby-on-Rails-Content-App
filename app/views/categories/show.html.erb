@@ -1,5 +1,5 @@
 <div class="grid-c pb-6 mb-6">
-  <% @category_articles.each_with_index do |article, index| %>
+  <% @category_articles.includes(:user).each_with_index do |article, index| %>
   <div>
 
     
