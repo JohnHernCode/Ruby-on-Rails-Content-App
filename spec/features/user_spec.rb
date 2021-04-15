@@ -4,7 +4,7 @@ require 'rails_helper'
 RSpec.feature 'Users', type: :feature do
   before(:all) do
     @user = User.new(name: 'TestGuy', password: 'password',
-                    password_confirmation: 'password')
+                     password_confirmation: 'password')
     @user.save
   end
   context 'Validate User Create Account' do

@@ -79,7 +79,5 @@ RSpec.feature 'Categories', type: :feature do
     end
     expect(page).to have_content('Priority has already been taken')
   end
-
-
 end
 # rubocop:enable Metrics/BlockLength
