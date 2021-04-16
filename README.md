@@ -33,7 +33,7 @@ This project was built using these technologies.
 ## Walkthrough Video and Deployment (Heroku)
 link goes here
 ##
-* Live Demo Link --> App Deployed with Heroku: [rails-capstone](#) :point_left:
+* Live Demo Link --> App Deployed with Heroku: [rails-capstone](https://hidden-savannah-73971.herokuapp.com) :point_left:
 
 ### Getting Started
 
@@ -81,27 +81,18 @@ $ rails server
 Open `http://localhost:3000/` in your browser and click sign up to create a new user.
 - for any technical problems running ```rails db:migrate:reset && rails db:seed && rake database:correction_seq_id ``` should solve it
 
-#### Create User
+#### Create User and Log In
 
 Fill the sign up form to create a user
-
-![screenshot](app/assets/images/sign_up.png)
-
-#### Login
-
-![screenshot](app/assets/images/log_in.png)
 
 #### Create a new article from the menu
 
 Type your title and text, add an image, and category
 
-![screenshot](app/assets/images/post.png)
-
   ## Automated Test
 
 * Run the command and see the output: 
 ```$ bundle exec rspec```
-![Rspec](app/assets/images/rspec.png)
 
 ## Database Structure
  * Database schema used for this project reflects the following structure:
