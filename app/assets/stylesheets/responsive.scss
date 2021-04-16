@@ -1,0 +1,51 @@
+@media screen and (min-width: 1440px) {
+  .content {
+    margin: 30px;
+  }
+
+  .article-img {
+    img {
+      margin: 30px;
+    }
+  }
+
+  .footer-info {
+    margin-left: 220px;
+  }
+
+  .nav-margin {
+    margin-left: 20px;
+  }
+
+  .header {
+    margin-left: 20px;
+    margin-right: 40px;
+  }
+
+  #navbar {
+    width: 1300px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .footer-info {
+    margin-left: 720px;
+  }
+
+  .nav-margin {
+    margin-left: 120px;
+  }
+
+  .logo {
+    margin-left: 90px;
+  }
+
+  .header {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+
+  #navbar {
+    width: 2300px;
+  }
+}
