@@ -13,10 +13,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is the Capstone project that signs the completion of the RubyOnRails module in Microverse Curriculum.
+This is the Capstone project that signs the completion of the RubyOnRails module in the Microverse Curriculum.
 It is a web app where users can register and create content.
 As a logged in user, it is possible to create articles and vote on articles.
-The app can be used also on read only mode, with restricted access to its features.
+The app can be used also in read only mode, with restricted access to its features.
 
 ![screenshot-1](app/assets/images/screenshot.png)
 
@@ -58,6 +58,10 @@ Rails: 6.1.3.1
 
 ### Setup
 
+### Prerequisite
+PostgreSQL is necessary
+Install Yarn: npm install --global yarn
+
 Install gems with:
 
 ```
@@ -67,6 +71,7 @@ $ bundler install --without production
 Setup database with:
 
 ```
+$ rails db:create before migration
 $ rails db:migrate (creates and migrates the database)
 $ rails db:seed    (seeds the database with default values)
 $ rake database:correction_seq_id  (corrects the postgreSQL sequence after seed)
