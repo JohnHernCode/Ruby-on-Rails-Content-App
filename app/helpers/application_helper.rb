@@ -9,9 +9,9 @@ module ApplicationHelper
 
   def sign_up_link
     if logged_in?
-      link_to 'CREATE A CATEGORY', new_category_path, html_options = { class: 'nav-theme cat-margin' }
+      link_to 'CREATE A CATEGORY', new_category_path, class: 'nav-theme cat-margin'
     else
-      link_to 'SIGN UP |', signup_path, html_options = { class: 'nav-theme' }
+      link_to 'SIGN UP |', signup_path, class: 'nav-theme'
     end
   end
 
@@ -24,7 +24,9 @@ module ApplicationHelper
     end
 
     categories.each do |category|
-      category_links << content_tag(:li, link_to(category.name.upcase, category_path(category), html_options = { class: 'nav-theme cat-margin' }), option)
+      category_links << content_tag(:li, link_to(category.name.upcase, category_path(category),
+                                                 html_options = { class: 'nav-theme cat-margin d-flex li-flex' }),
+                                    html_options, option)
     end
 
     category_links.html_safe
