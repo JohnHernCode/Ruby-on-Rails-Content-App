@@ -20,6 +20,10 @@ body {
   min-width: 1024px;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 
+  .li {
+    text-decoration: none;
+  }
+
   a:hover {
     text-decoration: none;
     color: inherit;
@@ -27,6 +31,7 @@ body {
 
   .li-flex {
     align-items: center;
+    text-decoration: none;
   }
 
   .nav-theme {
