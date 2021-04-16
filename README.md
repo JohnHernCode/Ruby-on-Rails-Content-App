@@ -31,7 +31,8 @@ This project was built using these technologies.
 
 <!-- Live Demo -->
 ## Walkthrough Video and Deployment (Heroku)
-[VIDEO-DEMO](https://share.vidyard.com/watch/Fm9iStFP1rbXVPRF6eDX3k?56a7821b8)
+
+* Walkthrough --> [VIDEO-DEMO](https://share.vidyard.com/watch/Fm9iStFP1rbXVPRF6eDX3k?56a7821b8) :point_left:
 
 ##
 * Live Demo Link --> App Deployed with Heroku: [rails-capstone](https://hidden-savannah-73971.herokuapp.com) :point_left:
