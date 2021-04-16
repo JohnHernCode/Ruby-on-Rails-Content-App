@@ -279,7 +279,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     ssrf_filter (1.0.7)
     standard (1.0.4)
       rubocop (= 1.11.0)
@@ -347,7 +346,6 @@ DEPENDENCIES
   selenium-webdriver
   simple_form (~> 5.1)
   spring
-  sqlite3 (~> 1.4)
   standard
   turbolinks (~> 5)
   tzinfo-data
