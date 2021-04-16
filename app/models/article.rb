@@ -7,7 +7,7 @@ class Article < ApplicationRecord
   belongs_to :user, foreign_key: 'author_id', class_name: 'User'
   has_many :article_categories, foreign_key: 'article_id'
   has_many :categories, through: :article_categories, dependent: :destroy
-  has_many :votes, foreign_key: 'article_id', class_name: 'Vote', dependent: :destroy, counter_cache: true
+  has_many :votes, foreign_key: 'article_id', class_name: 'Vote', dependent: :destroy
   has_one_attached :image
 
   validates_presence_of :title, :text, :author_id, :image
