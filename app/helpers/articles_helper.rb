@@ -1,3 +1,5 @@
+require 'categories_helper'
+
 module ArticlesHelper
   def featured_title(article)
     article.try(:title)

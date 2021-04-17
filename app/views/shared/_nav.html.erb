@@ -13,6 +13,7 @@
         <%= nav_menu(@nav_categories, :class => "d-flex li-flex") %>
         <li class="move-right d-flex li-flex bd-highlight theme-color is-align-content-end">
           <div>
+            <%= link_to 'ALL CATEGORIES', categories_path, class: 'nav-theme cat-margin' %>
             <%= sign_up_link %>
           </div>
         </li>
