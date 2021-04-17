@@ -43,8 +43,10 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 3.3.0
-Rails: 6.1.3.1
+- Ruby: 3.3.0
+- Rails: 6.1.3.1
+- PostgreSQL is necessary
+- Install Yarn
 
 ### Clone
 * [download zip link](https://github.com/JohnHernCode/Rails-Capstone/archive/refs/heads/develop.zip) or clone this repo:
@@ -58,9 +60,6 @@ Rails: 6.1.3.1
 
 ### Setup
 
-### Prerequisite
-PostgreSQL is necessary
-Install Yarn: npm install --global yarn
 
 Install gems with:
 
