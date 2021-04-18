@@ -1,0 +1,13 @@
+<div class="feature">
+
+  <div class="featured" style="background-image: url(<%= featured_image(@featured) %>);">
+    <p class="theme-color feature-title"> <%= featured_title_link(@featured) %></p>
+    <p class="feature-text"> <%= featured_content(@featured) %></p>
+  </div>
+
+    <div class="grid-h">
+      <%= category_loop(@categories) %>
+    </div>
+
+</div>
+

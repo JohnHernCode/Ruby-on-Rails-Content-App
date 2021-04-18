@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="d-flex flex-row bd-highlight">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="navbar-brand">
+      <%= link_to image_tag("logos/logo.png", alt: "logo", :size => "112x28"), '/', class: 'navbar-brand' %>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row ">
+        <li class="p-2 cat-margin"><%= link_to 'HOME', root_path, class: 'theme-color cat-margin' %></li>
+        <%= nav_menu(@nav_categories, :class => "d-flex li-flex") %>
+        <li class="move-right d-flex li-flex bd-highlight theme-color is-align-content-end">
+          <div>
+            <%= link_to 'ALL CATEGORIES', categories_path, class: 'nav-theme cat-margin' %>
+            <%= sign_up_link %>
+          </div>
+        </li>
+        <li class="p-2 bd-highlight theme-color">
+          <div>
+            <%= session_button %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

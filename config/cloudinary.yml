@@ -1,0 +1,18 @@
+development:
+  cloud_name: "johnhern"
+  api_key: "724714393815166"
+  api_secret: "GR95YgA4ji0EUXa3yJOk5TauU_0"
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: "johnhern"
+  api_key: "724714393815166"
+  api_secret: "GR95YgA4ji0EUXa3yJOk5TauU_0"
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: "johnhern"
+  api_key: "724714393815166"
+  api_secret: "GR95YgA4ji0EUXa3yJOk5TauU_0"
+  enhance_image_tag: true
+  static_file_support: false

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class SessionsController < ApplicationController
   def new; end
 
@@ -7,7 +5,8 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:session][:name].downcase)
     if user&.authenticate(params[:session][:password])
       log_in user
-      redirect_back_or user
+      flash[:notice] = 'You signed in successfully!'
+      redirect_to root_path
     else
       flash.now[:danger] = 'Invalid name/password combination'
       render 'new'
@@ -16,6 +15,6 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out
-    redirect_to root_url
+    redirect_to root_path
   end
 end

@@ -1,0 +1,34 @@
+<div class="row pb-6">
+  <div class="col-md-4 offset-4">
+    <%= form_with(model: article, local: true) do |form| %>
+
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, class: 'mb-1 form-control', autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= form.label :text %>
+      <%= form.text_area :text, class: 'mb-1 form-control' %>
+    </div>
+
+    <div class="field">
+      <%= form.label :image %>
+      <%= form.file_field :image, class: "mt-2 btn theme-btn" %>
+    </div>
+
+    <div class="field">
+      <%= form.hidden_field :image_cache%>
+    </div>
+
+    <div class="field">
+      <%= form.label :category_id, 'Category' %>
+      <%= form.collection_select :category_id, Category.order(:name), :id, :name %>
+    </div>
+
+    <div class="field actions">
+      <%= form.submit class: "mt-2 btn theme-btn" %>
+    </div>
+    <% end %>
+  </div>
+</div>
