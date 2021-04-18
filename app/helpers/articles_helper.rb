@@ -36,7 +36,7 @@ module ArticlesHelper
       url = link_to category.name, category_path(category)
       content_category << content_tag(:div, class: 'category', style: background) do
         content_tag(:p, url) +
-        content_tag(:span, category_article_link(category))
+          content_tag(:span, category_article_link(category))
       end
     end
     content_category.html_safe
