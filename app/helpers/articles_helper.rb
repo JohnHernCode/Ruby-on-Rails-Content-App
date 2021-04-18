@@ -28,4 +28,16 @@ module ArticlesHelper
   def featured_title_link(article)
     link_to(featured_title(article), article_path(article), class: 'link-title underline') if article
   end
+
+  def category_loop(categories)
+    content_category = ''
+    categories.each do |category|
+      background = "background-image: url(#{latest_article_background(category)});"
+      content_category << content_tag(:div, class: 'category', style: background) do
+        link_to category.name, category_path(category)
+        content_tag(:span, category_article_link(category))
+      end
+    end
+    content_category.html_safe
+  end
 end

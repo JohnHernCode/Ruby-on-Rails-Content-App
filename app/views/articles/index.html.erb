@@ -6,12 +6,7 @@
   </div>
 
     <div class="grid-h">
-      <% @categories.each do |category| %>
-        <div class="category" style="background-image: url(<%= latest_article_background(category) %>);">
-          <p> <%= link_to category.name, category_path(category) %></p>
-          <span> <%= category_article_link(category) %></span>
-        </div>
-      <% end %>
+      <%= category_loop(@categories) %>
     </div>
 
 </div>
